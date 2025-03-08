@@ -1,0 +1,113 @@
+.cart-page {
+  padding: 20px;
+}
+
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fafafa;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cart-item-info h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.cart-item-info p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ✅ "-" button stays red */
+.cart-quantity button:first-of-type {
+  background: #f44336;
+}
+
+.cart-quantity button:first-of-type:hover {
+  background: #d32f2f;
+}
+
+/* ✅ "+" button gets new color */
+.cart-quantity button:last-of-type {
+  background: #e69500;
+}
+
+.cart-quantity button:last-of-type:hover {
+  background: #d17c00;
+}
+
+.cart-quantity button {
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+}
+
+.cart-quantity span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* ✅ Keep Remove button red */
+.cart-item-info button {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.cart-item-info button:hover {
+  background: #d32f2f;
+}
+
+/* ✅ Total aligned to the left */
+.cart-total {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+}
