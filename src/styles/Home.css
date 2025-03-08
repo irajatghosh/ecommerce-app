@@ -1,6 +1,74 @@
-.product-list {
+/*  Wrap content to full width */
+.home-container {
+  width: 100%; /*  Use full width */
+  padding: 16px 24px;
+  box-sizing: border-box; /* Prevent overflow from padding */
+}
+.title {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+/*  Fix alignment of header and grid */
+h1 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/*  Product Grid */
+.product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  width: 90%; /*  Ensure grid takes full width */
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: #f44336;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    width: 95%; /* Match header width to grid width */
+  }
+  .product-grid {
+    width: 95%; /* Slightly wider on medium screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+    width: 100;
+  }
+
+  .product-grid {
+    width: 100;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Smaller cards on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(120px, 1fr)
+    ); /* Further reduction for small screens */
+    gap: 8px;
+  }
 }

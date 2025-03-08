@@ -4,7 +4,7 @@ import { fetchProducts } from '../store/slices/productSlice';
 import { RootState } from '../store/store';
 import ProductCard from '../components/ProductCard';
 import { useAppDispatch } from '../store/hooks';
-import '../styles/ProductCard.css'; // Importing ProductCard styles
+import '../styles/Home.css';
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -18,13 +18,18 @@ const Home: React.FC = () => {
   }, [dispatch, status]);
 
   return (
-    <div>
-      <h1>Shop Products</h1>
-      {status === 'loading' && products.length === 0 && (
-        <p>Loading products...</p>
-      )}
-      {status === 'failed' && <p>Failed to load products. Try again later.</p>}
-      <div className="product-list">
+    <div className="home-container">
+      <div className="title">
+        <h1>Shop Products</h1>
+        {status === 'loading' && products.length === 0 && (
+          <p>Loading products...</p>
+        )}
+        {status === 'failed' && products.length === 0 && (
+          <p>Failed to load products. Try again later.</p>
+        )}
+      </div>
+
+      <div className="product-grid">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}

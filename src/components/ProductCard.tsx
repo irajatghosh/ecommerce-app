@@ -9,6 +9,7 @@ import { Product } from '../types/product';
 import { CartItem } from '../types/cart';
 import { RootState } from '../store/store';
 import { FaShoppingCart, FaHeart, FaRegHeart } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import '../styles/ProductCard.css';
 
 interface Props {
@@ -37,8 +38,12 @@ const ProductCard: React.FC<Props> = ({ product }) => {
   };
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.title} />
-      <h3>{product.title}</h3>
+      <Link to={`/product/${product.id}`}>
+        <img src={product.image} alt={product.title} />
+      </Link>
+      <Link to={`/product/${product.id}`}>
+        <h3>{product.title}</h3>
+      </Link>
       <p>${product.price.toFixed(2)}</p>
       <div className="product-card-buttons">
         <button onClick={handleAddToCart}>

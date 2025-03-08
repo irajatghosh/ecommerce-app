@@ -1,5 +1,5 @@
 .cart-page {
-  padding: 20px;
+  padding: 16px 24px;
 }
 
 .cart-list {
@@ -50,7 +50,7 @@
   gap: 12px;
 }
 
-/* ✅ "-" button stays red */
+/* "-" button stays red */
 .cart-quantity button:first-of-type {
   background: #f44336;
 }
@@ -59,7 +59,7 @@
   background: #d32f2f;
 }
 
-/* ✅ "+" button gets new color */
+/* "+" button gets new color */
 .cart-quantity button:last-of-type {
   background: #e69500;
 }
@@ -84,7 +84,7 @@
   font-weight: bold;
 }
 
-/* ✅ Keep Remove button red */
+/* Keep Remove button red */
 .cart-item-info button {
   background: #f44336;
   color: white;
@@ -103,7 +103,7 @@
   background: #d32f2f;
 }
 
-/* ✅ Total aligned to the left */
+/* Total aligned to the left */
 .cart-total {
   margin-top: 20px;
   font-size: 1.2rem;

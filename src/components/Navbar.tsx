@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { RootState } from '../store/store';
 import { useSelector } from 'react-redux';
+import '../styles/Navbar.css';
 
 const Navbar: React.FC = () => {
   const wishlistCount = useSelector(
